@@ -99,7 +99,7 @@ public class Git {
         return Int(String(first))
     }
 
-    @noreturn public class func checkGitVersion(_ error: Swift.Error) throws {
+    public class func checkGitVersion(_ error: Swift.Error) throws -> Never {
         // Git 2.0 or higher is required
         if let majorVersion = Git.majorVersionNumber, majorVersion < 2 {
             // FIXME: This does not belong here.
